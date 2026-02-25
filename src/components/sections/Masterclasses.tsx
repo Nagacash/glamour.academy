@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Sparkles, Trophy, Users } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -228,10 +229,10 @@ export function Masterclasses() {
                     <p className="font-light text-[#1c1a19]/60 italic mb-8">
                         Limitierte Plätze für maximale Ausbildungsqualität.
                     </p>
-                    <button className="group relative px-12 py-5 bg-[#1c1a19] text-brand-champagne uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500 hover:bg-[#2a2826] hover:text-white">
+                    <Link href="/masterclasses" className="group relative inline-block px-12 py-5 bg-[#1c1a19] text-brand-champagne uppercase tracking-[0.3em] text-[10px] font-bold transition-all duration-500 hover:bg-[#2a2826] hover:text-white">
                         <span className="relative z-10">Alle Masterclasses Ansehen</span>
                         <div className="absolute inset-0 border border-brand-gold scale-[1.05] opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500" />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>
