@@ -2,10 +2,17 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-import { Play, Sparkles, Star, Award } from "lucide-react";
+import { Play, Sparkles, Star, Award, Headphones } from "lucide-react";
 
-export function HeroSection() {
+type HeroSectionProps = {
+  onOpenAssistant?: () => void;
+};
+
+gsap.registerPlugin(ScrollTrigger);
+
+export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
     const containerRef = useRef<HTMLElement>(null);
     const focalImageRef = useRef<HTMLDivElement>(null);
 
@@ -87,9 +94,22 @@ export function HeroSection() {
                     </p>
 
                     <div className="hero-text flex flex-wrap items-center gap-6">
+                        {onOpenAssistant && (
+                            <button
+                                type="button"
+                                onClick={onOpenAssistant}
+                                className="px-10 py-5 bg-[#1c1a19] text-white rounded-full font-bold text-xs tracking-[0.2em] hover:bg-brand-gold transition-all duration-500 shadow-2xl hover:shadow-brand-gold/20 flex items-center gap-3 group"
+                            >
+                                AI Website Support
+                                <Headphones
+                                    size={14}
+                                    className="group-hover:scale-110 transition-transform"
+                                />
+                            </button>
+                        )}
                         <Link
                             href="#academy"
-                            className="px-10 py-5 bg-[#1c1a19] text-white rounded-full font-bold text-xs tracking-[0.2em] hover:bg-brand-gold transition-all duration-500 shadow-2xl hover:shadow-brand-gold/20 flex items-center gap-3 group"
+                            className="px-10 py-5 border-2 border-[#1c1a19] text-[#1c1a19] rounded-full font-bold text-xs tracking-[0.2em] hover:bg-[#1c1a19] hover:text-white transition-all duration-500 flex items-center gap-3 group"
                         >
                             JOIN THE ACADEMY
                             <Sparkles
