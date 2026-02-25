@@ -130,12 +130,12 @@ export function Masterclasses() {
                         </div>
                     </div>
                     <div className="mc-header-text w-full lg:w-1/2">
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
-                            <Image
+                        <div className="overflow-hidden rounded-sm">
+                            <img
                                 src="/images/team4.webp"
                                 alt="Elite Training Team"
-                                fill
-                                className="object-cover"
+                                loading="lazy"
+                                className="w-full h-auto object-cover aspect-[4/3]"
                             />
                         </div>
                     </div>
