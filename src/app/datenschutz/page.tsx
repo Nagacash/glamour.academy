@@ -13,7 +13,6 @@ import {
     Eye,
     PenLine,
     Lock,
-    Cookie,
     BarChart3,
     Target,
     ChevronLeft,
@@ -146,7 +145,7 @@ export default function DatenschutzPage() {
             </div>
 
             {/* Hero */}
-            <section className="bg-[#1c1a19] text-white pt-16 pb-24 px-6">
+            <section className="bg-[#1c1a19] text-white pt-12 pb-16 md:pt-16 md:pb-24 px-6">
                 <div className="max-w-5xl mx-auto text-center">
                     <div className="inline-flex items-center gap-3 mb-8">
                         <Shield size={20} className="text-brand-gold" />
@@ -165,7 +164,7 @@ export default function DatenschutzPage() {
             </section>
 
             {/* Ihre Datenschutzrechte */}
-            <section className="py-24 px-6">
+            <section className="py-16 md:py-24 px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="uppercase tracking-[0.3em] text-xs font-semibold text-brand-gold block mb-4">
@@ -206,7 +205,7 @@ export default function DatenschutzPage() {
             </section>
 
             {/* Rechtsgrundlagen */}
-            <section className="bg-[#1c1a19] text-white py-24 px-6">
+            <section className="bg-[#1c1a19] text-white py-16 md:py-24 px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="uppercase tracking-[0.3em] text-xs font-semibold text-brand-gold block mb-4">
@@ -237,7 +236,7 @@ export default function DatenschutzPage() {
             </section>
 
             {/* Datenkategorien */}
-            <section className="py-24 px-6">
+            <section className="py-16 md:py-24 px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="uppercase tracking-[0.3em] text-xs font-semibold text-brand-gold block mb-4">
@@ -275,7 +274,7 @@ export default function DatenschutzPage() {
             </section>
 
             {/* Einwilligungsmanagement */}
-            <section className="bg-white py-24 px-6">
+            <section className="bg-white py-16 md:py-24 px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="uppercase tracking-[0.3em] text-xs font-semibold text-brand-gold block mb-4">
@@ -401,7 +400,7 @@ export default function DatenschutzPage() {
             </section>
 
             {/* Datenspeicherung & Aufbewahrung */}
-            <section className="py-24 px-6">
+            <section className="py-16 md:py-24 px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="uppercase tracking-[0.3em] text-xs font-semibold text-brand-gold block mb-4">
@@ -409,7 +408,8 @@ export default function DatenschutzPage() {
                         </span>
                     </div>
 
-                    <div className="bg-white border border-brand-champagne/30 overflow-hidden">
+                    {/* Desktop table */}
+                    <div className="hidden md:block bg-white border border-brand-champagne/30 overflow-hidden">
                         <div className="grid grid-cols-3 bg-[#1c1a19] text-white">
                             <div className="p-4 text-xs uppercase tracking-wider font-semibold">
                                 Datentyp
@@ -450,11 +450,35 @@ export default function DatenschutzPage() {
                             </div>
                         ))}
                     </div>
+
+                    {/* Mobile cards */}
+                    <div className="md:hidden space-y-4">
+                        {retentionData.map((row) => (
+                            <div
+                                key={row.type}
+                                className="bg-white border border-brand-champagne/30 p-5"
+                            >
+                                <h4 className="font-serif text-base mb-3">
+                                    {row.type}
+                                </h4>
+                                <div className="flex items-center gap-2 text-sm font-light mb-2">
+                                    <Clock
+                                        size={14}
+                                        className="text-brand-champagne-dark shrink-0"
+                                    />
+                                    {row.period}
+                                </div>
+                                <p className="text-sm font-light text-foreground/60">
+                                    {row.basis}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
             {/* Datenschutzanfrage stellen */}
-            <section className="bg-[#1c1a19] text-white py-24 px-6">
+            <section className="bg-[#1c1a19] text-white py-16 md:py-24 px-6">
                 <div className="max-w-3xl mx-auto text-center">
                     <FileText
                         size={28}

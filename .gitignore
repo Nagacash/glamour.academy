@@ -20,8 +20,8 @@
 # production
 /build
 
-# agent skills
-.agent/skills/superpowers
+# agent
+.agent/
 
 # misc
 .DS_Store

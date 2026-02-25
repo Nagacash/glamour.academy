@@ -92,31 +92,55 @@ export function Masterclasses() {
         <section
             ref={containerRef}
             id="masterclasses"
-            className="relative py-32 overflow-hidden bg-brand-beige"
+            className="relative py-20 lg:py-28 overflow-hidden bg-brand-beige"
         >
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-champagne/10 to-transparent pointer-events-none" />
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div ref={headerRef} className="max-w-4xl mb-24">
-                    <div className="mc-header-text mb-4 inline-flex items-center gap-3">
-                        <div className="h-px w-12 bg-brand-gold"></div>
-                        <span className="uppercase tracking-[0.4em] text-[10px] font-bold text-brand-gold">
-                            The Elite Training
-                        </span>
+                <div ref={headerRef} className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-16 lg:mb-20">
+                    <div className="w-full lg:w-1/2">
+                        <div className="mc-header-text mb-4 inline-flex items-center gap-3">
+                            <div className="h-px w-12 bg-brand-gold"></div>
+                            <span className="uppercase tracking-[0.4em] text-[10px] font-bold text-brand-gold">
+                                The Elite Training
+                            </span>
+                        </div>
+                        <h2 className="mc-header-text font-serif text-5xl md:text-7xl leading-[1.1] text-[#1c1a19] mb-8">
+                            Meisterhaft in der <br />
+                            <span className="italic font-light text-brand-gold/80">Ästhetik.</span>
+                        </h2>
+                        <p className="mc-header-text text-lg text-[#1c1a19]/70 font-light max-w-2xl leading-relaxed italic mb-8">
+                            Transformieren Sie Ihre Expertise mit unseren Deep-Dive Masterclasses.
+                            Wissenschaft trifft auf künstlerische Präzision.
+                        </p>
+                        <div className="mc-header-text space-y-4 text-sm text-[#1c1a19]/60 font-light leading-relaxed max-w-lg">
+                            <p>
+                                Unsere Masterclasses vereinen über 60 Jahre klinische Erfahrung in kompakten, 
+                                praxisorientierten Intensivkursen. Jede Einheit wird von erfahrenen Fachärztinnen 
+                                und Heilpraktikerinnen geleitet, die ihr Wissen aus Hunderten realer Behandlungen einbringen.
+                            </p>
+                            <p>
+                                Von fortgeschrittenen Injektionstechniken bis hin zu innovativen Anti-Aging-Protokollen — 
+                                unsere Module sind darauf ausgelegt, Ihre Fähigkeiten auf das nächste Level zu heben. 
+                                Kleine Gruppengrößen garantieren individuelles Feedback und maximalen Lernerfolg.
+                            </p>
+                        </div>
                     </div>
-                    <h2 className="mc-header-text font-serif text-5xl md:text-7xl leading-[1.1] text-[#1c1a19] mb-8">
-                        Meisterhaft in der <br />
-                        <span className="italic font-light text-brand-gold/80">Ästhetik.</span>
-                    </h2>
-                    <p className="mc-header-text text-lg text-[#1c1a19]/70 font-light max-w-2xl leading-relaxed italic">
-                        Transformieren Sie Ihre Expertise mit unseren Deep-Dive Masterclasses.
-                        Wissenschaft trifft auf künstlerische Präzision.
-                    </p>
+                    <div className="mc-header-text w-full lg:w-1/2">
+                        <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+                            <Image
+                                src="/images/team4.webp"
+                                alt="Elite Training Team"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
                 </div>
 
-                <div className="mc-grid grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div className="mc-grid grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {classes.map((cls, i) => (
                         <div
                             key={i}
@@ -200,7 +224,7 @@ export function Masterclasses() {
                 </div>
 
                 {/* Footer CTA */}
-                <div className="mt-24 text-center">
+                <div className="mt-12 text-center">
                     <p className="font-light text-[#1c1a19]/60 italic mb-8">
                         Limitierte Plätze für maximale Ausbildungsqualität.
                     </p>

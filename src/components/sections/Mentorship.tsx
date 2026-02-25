@@ -69,7 +69,7 @@ export function Mentorship() {
                 <div className="lg:w-1/2 relative h-screen w-full lg:h-auto overflow-hidden">
                     <img
                         ref={imgRef}
-                        src="https://images.unsplash.com/photo-1598440947619-2ce1bd203247?auto=format&fit=crop&q=80&w=2670"
+                        src="/images/team5.webp"
                         alt="Mentorship hands on training"
                         loading="lazy"
                         className="absolute inset-x-0 -top-[20%] h-[140%] w-full object-cover mix-blend-multiply opacity-80 scale-105"
