@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Sparkles, Trophy, Users } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -149,11 +148,10 @@ export function Masterclasses() {
                         >
                             {/* Image Container */}
                             <div className="relative h-[400px] overflow-hidden bg-white">
-                                <Image
+                                <img
                                     src={cls.image}
                                     alt={cls.title}
-                                    fill
-                                    className="mc-image-parallax object-cover scale-105 transition-transform duration-1000 group-hover:scale-100"
+                                    className="mc-image-parallax w-full h-full object-cover scale-105 transition-transform duration-1000 group-hover:scale-100"
                                 />
 
                                 <div className="absolute inset-0 bg-black/5 z-10 transition-opacity duration-700 group-hover:opacity-0" />

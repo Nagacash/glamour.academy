@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,10 +59,18 @@ export function Mentorship() {
                     </p>
 
                     <div className="mentor-text">
-                        <button className="relative overflow-hidden group border border-brand-gold bg-transparent text-brand-gold px-8 py-4 uppercase tracking-widest text-xs transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1a19]">
-                            <span className="absolute inset-0 bg-brand-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" aria-hidden="true"></span>
-                            <span className="relative z-10 group-hover:text-[#1c1a19] transition-colors duration-500">Jetzt Starten</span>
-                        </button>
+                        <Link
+                            href="/module#klinische-basis"
+                            className="relative inline-flex overflow-hidden group border border-brand-gold bg-transparent text-brand-gold px-8 py-4 uppercase tracking-widest text-xs transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1a19]"
+                        >
+                            <span
+                                className="absolute inset-0 bg-brand-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"
+                                aria-hidden="true"
+                            ></span>
+                            <span className="relative z-10 group-hover:text-[#1c1a19] transition-colors duration-500">
+                                Jetzt Starten
+                            </span>
+                        </Link>
                     </div>
                 </div>
 
@@ -80,9 +89,12 @@ export function Mentorship() {
                             Precision erleben.<br />
                             <span className="italic text-brand-champagne">Artist Training.</span>
                         </h2>
-                        <button className="relative overflow-hidden group border border-brand-gold bg-brand-gold text-[#1c1a19] px-8 py-4 uppercase tracking-widest text-xs mx-auto transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+                        <Link
+                            href="/module#klinische-basis"
+                            className="relative inline-flex overflow-hidden group border border-brand-gold bg-brand-gold text-[#1c1a19] px-8 py-4 uppercase tracking-widest text-xs mx-auto transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                        >
                             Jetzt Starten
-                        </button>
+                        </Link>
                     </div>
                 </div>
 

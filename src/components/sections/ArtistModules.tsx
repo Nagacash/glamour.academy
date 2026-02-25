@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ShieldAlert, Microscope, Syringe, Brain, Briefcase } from "lucide-react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,12 +84,12 @@ export function ArtistModules() {
                     <div className="module-card bg-brand-gold p-10 text-white flex flex-col justify-center items-center text-center">
                         <h3 className="font-serif text-2xl italic mb-4">Ihre Zukunft beginnt.</h3>
                         <p className="text-white/80 font-light text-sm mb-6">Keine Standardlösungen. Maßgeschneidertes Fachwissen.</p>
-                        <button
-                            aria-label="Alle Module ansehen"
+                        <Link
+                            href="/module#klinische-basis"
                             className="px-6 py-3 border border-white hover:bg-white hover:text-brand-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-gold transition-colors duration-300 uppercase tracking-widest text-xs"
                         >
                             Alle Module ansehen
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

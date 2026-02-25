@@ -44,7 +44,6 @@ function ClipCard({ clip, index }: { clip: typeof clips[number]; index: number }
                 playsInline
                 src={clip.src}
                 title={clip.alt}
-                poster={`/clips/poster${index + 1}.jpg`}
                 className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 rounded-2xl"
             />
 
