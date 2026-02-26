@@ -52,18 +52,10 @@ export function AssistantPanel({
       }
       const { token } = (await res.json()) as { token: string };
       await navigator.mediaDevices.getUserMedia({ audio: true });
-      // Try WebSocket first (often unblocked); fallback to WebRTC for lower latency
-      try {
-        await conversation.startSession({
-          conversationToken: token,
-          connectionType: "websocket",
-        });
-      } catch {
-        await conversation.startSession({
-          conversationToken: token,
-          connectionType: "webrtc",
-        });
-      }
+      await conversation.startSession({
+        conversationToken: token,
+        connectionType: "webrtc",
+      });
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
       const hint =
