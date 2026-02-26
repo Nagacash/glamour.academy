@@ -52,13 +52,25 @@ export function AssistantPanel({
       }
       const { token } = (await res.json()) as { token: string };
       await navigator.mediaDevices.getUserMedia({ audio: true });
-      await conversation.startSession({
-        conversationToken: token,
-        connectionType: "webrtc",
-      });
+      // Try WebSocket first (often unblocked); fallback to WebRTC for lower latency
+      try {
+        await conversation.startSession({
+          conversationToken: token,
+          connectionType: "websocket",
+        });
+      } catch {
+        await conversation.startSession({
+          conversationToken: token,
+          connectionType: "webrtc",
+        });
+      }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
-      setConnectionError(msg);
+      const hint =
+        msg.includes("Couldn't connect") || msg.includes("WebSocket") || msg.includes("blocked")
+          ? " Try disabling ad blockers or privacy extensions for this site, or use a different browser."
+          : "";
+      setConnectionError(msg + hint);
     } finally {
       setTokenLoading(false);
     }
@@ -117,9 +129,14 @@ export function AssistantPanel({
 
         <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0">
           {!isConnected && !isConnecting && (
-            <p className="text-white/50 text-sm font-light">
-              Start a voice conversation with Susi. Ask about courses, treatments, or booking.
-            </p>
+            <div className="space-y-2">
+              <p className="text-white/50 text-sm font-light">
+                Start a voice conversation with Susi. Ask about courses, treatments, or booking.
+              </p>
+              <p className="text-white/40 text-xs font-light">
+                If connection fails, try disabling ad blockers or privacy extensions for this site.
+              </p>
+            </div>
           )}
           {connectionError && (
             <p className="text-red-400/90 text-sm font-light bg-red-500/10 rounded-lg px-3 py-2">
