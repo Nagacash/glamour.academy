@@ -42,7 +42,7 @@ export function Footer() {
                 </div>
 
                 <div>
-                    <h3 className="uppercase tracking-[0.2em] text-xs font-semibold mb-6 text-brand-gold">Kontakt</h3>
+                    <Link href="/kontakt" className="uppercase tracking-[0.2em] text-xs font-semibold mb-6 text-brand-gold block hover:text-brand-champagne transition-colors">Kontakt</Link>
                     <ul className="space-y-4 text-sm text-gray-400 font-light">
                         <li className="flex items-center space-x-3">
                             <Phone size={16} className="text-brand-champagne-dark" />
@@ -50,7 +50,7 @@ export function Footer() {
                         </li>
                         <li className="flex items-center space-x-3">
                             <Mail size={16} className="text-brand-champagne-dark" />
-                            <span>info@beautyakademy.de</span>
+                            <span>info@glamour-academy.com</span>
                         </li>
                     </ul>
                 </div>

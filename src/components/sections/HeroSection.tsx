@@ -100,7 +100,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                                 onClick={onOpenAssistant}
                                 className="px-10 py-5 bg-[#1c1a19] text-white rounded-full font-bold text-xs tracking-[0.2em] hover:bg-brand-gold transition-all duration-500 shadow-2xl hover:shadow-brand-gold/20 flex items-center gap-3 group"
                             >
-                                AI Website Support
+                               Spreche mit AI Susi - dein persönlicher Assistent
                                 <Headphones
                                     size={14}
                                     className="group-hover:scale-110 transition-transform"
@@ -164,14 +164,14 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                                     />
                                 </div>
                                 <span className="text-[10px] font-bold tracking-widest text-brand-foreground uppercase opacity-60">
-                                    Success
+                                    Erfolg
                                 </span>
                             </div>
                             <div className="text-3xl font-serif text-brand-foreground leading-none mb-1">
                                 98%
                             </div>
                             <div className="text-[11px] text-brand-foreground/60 leading-tight">
-                                Post-training certification success rate.
+                                Zertifizierungs-Erfolgsquote nach dem Training.
                             </div>
                         </div>
 

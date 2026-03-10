@@ -17,6 +17,13 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Glamour Akademie – The Perfect Skin®",
   description: "Klinische Präzision trifft ästhetische Empathie. 60 Jahre gebündeltes Wissen in Treatments, Masterclasses & Artist Training.",
+  openGraph: {
+    images: ["/images/hero/glam1.webp"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/hero/glam1.webp"],
+  },
 };
 
 export default function RootLayout({

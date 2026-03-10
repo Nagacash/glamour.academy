@@ -108,7 +108,7 @@ export function AssistantPanel({
         aria-label="AI Website Support"
       >
         <div className="flex items-center justify-between p-4 border-b border-white/10">
-          <h2 className="font-serif text-lg text-white">Susi – AI Website Support</h2>
+          <h2 className="font-serif text-lg text-white">Stell mir Fragen zu Beauty Akademie, Masterclasses, Artist Modules und mehr</h2>
           <button
             type="button"
             onClick={onClose}

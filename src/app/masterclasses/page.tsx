@@ -33,9 +33,9 @@ const masterclasses = [
         title: "Lip Artist",
         subtitle: "Advanced Sculpting",
         tagline: "Die Kunst der perfekten Lippe.",
-        price: "1.200€",
-        duration: "2 Tage Intensiv",
-        groupSize: "Max. 6 Teilnehmer",
+        price: "200€ / Stunde",
+        duration: "2–6 Stunden",
+        groupSize: "3–4 Teilnehmer",
         image: "/images/masterclasses/lips.png",
         icon: <Sparkles className="w-5 h-5" />,
         accent: "from-rose-900/80 to-[#1c1a19]",
@@ -49,8 +49,8 @@ const masterclasses = [
             "Komplikationsmanagement & Hyaluronidase-Protokoll",
         ],
         curriculum: [
-            { day: "Tag 1", focus: "Theorie & Anatomie", details: "Lippengefäßsystem, Gefahrenzonen, Produktkunde, Live-Demonstrationen" },
-            { day: "Tag 2", focus: "Hands-On Training", details: "Übungen am Modell, individuelle Korrekturen, Foto-Dokumentation, Zertifizierung" },
+            { day: "Stunden 1", focus: "Theorie & Anatomie", details: "Lippengefäßsystem, Gefahrenzonen, Produktkunde, Live-Demonstrationen" },
+            { day: "Stunden 2", focus: "Hands-On Training", details: "Übungen am Modell, individuelle Korrekturen, Foto-Dokumentation, Zertifizierung" },
         ],
         bonus: "Social Media Lip Branding Guide — So vermarkten Sie Ihre neuen Fähigkeiten erfolgreich.",
         testimonial: {
@@ -65,9 +65,9 @@ const masterclasses = [
         title: "Face Sculpt",
         subtitle: "Total Profile Balance",
         tagline: "Gesichtsarchitektur neu definiert.",
-        price: "1.500€",
-        duration: "3 Tage Intensiv",
-        groupSize: "Max. 4 Teilnehmer",
+        price: "200€ / Stunde",
+        duration: "2–6 Stunden",
+        groupSize: "3–4 Teilnehmer",
         image: "/images/masterclasses/face.png",
         icon: <Trophy className="w-5 h-5" />,
         accent: "from-amber-900/80 to-[#1c1a19]",
@@ -81,9 +81,9 @@ const masterclasses = [
             "Liquid Rhinoplasty — nicht-chirurgische Nasenkorrektur",
         ],
         curriculum: [
-            { day: "Tag 1", focus: "Anatomie Deep-Dive", details: "Gesichtsgefäße, Danger Zones, Proportionslehre, Behandlungsplanung" },
-            { day: "Tag 2", focus: "Live-Demonstrationen", details: "Expertinnen zeigen alle Techniken am Modell, Q&A, Produktvergleich" },
-            { day: "Tag 3", focus: "Hands-On & Zertifizierung", details: "Eigenständige Behandlungen unter Supervision, Fotodokumentation, Zertifikat" },
+            { day: "Stunden 1", focus: "Anatomie Deep-Dive", details: "Gesichtsgefäße, Danger Zones, Proportionslehre, Behandlungsplanung" },
+            { day: "Stunden 2", focus: "Live-Demonstrationen", details: "Expertinnen zeigen alle Techniken am Modell, Q&A, Produktvergleich" },
+            { day: "Stunden 3", focus: "Hands-On & Zertifizierung", details: "Eigenständige Behandlungen unter Supervision, Fotodokumentation, Zertifikat" },
         ],
         bonus: "Anatomie & Notfallmanagement Kurs — Sicherheit als Fundament jeder Behandlung.",
         testimonial: {
@@ -98,9 +98,9 @@ const masterclasses = [
         title: "Glow Expert",
         subtitle: "The Science of Radiance",
         tagline: "Strahlende Haut. Auf Zellebene.",
-        price: "950€",
-        duration: "1,5 Tage Intensiv",
-        groupSize: "Max. 8 Teilnehmer",
+        price: "200€ / Stunde",
+        duration: "2–6 Stunden",
+        groupSize: "3–4 Teilnehmer",
         image: "/images/masterclasses/glow.png",
         icon: <Users className="w-5 h-5" />,
         accent: "from-emerald-900/80 to-[#1c1a19]",
@@ -114,8 +114,8 @@ const masterclasses = [
             "LED & Mikrostrom-Kombinationstherapien",
         ],
         curriculum: [
-            { day: "Tag 1", focus: "Hautphysiologie & Protokolle", details: "Zellbiologie, Wirkstoffkunde, Cocktail-Rezepturen, Live-Demos" },
-            { day: "Tag 2 (halber Tag)", focus: "Praxis & Zertifizierung", details: "Hands-On Mesotherapie, Skinbooster-Applikation, Abschlussprüfung" },
+            { day: "Stunden 1", focus: "Hautphysiologie & Protokolle", details: "Zellbiologie, Wirkstoffkunde, Cocktail-Rezepturen, Live-Demos" },
+            { day: "Stunden 2 (halber Tag)", focus: "Praxis & Zertifizierung", details: "Hands-On Mesotherapie, Skinbooster-Applikation, Abschlussprüfung" },
         ],
         bonus: "Skin Cocktail Rezepturen — Exklusive Formulierungen für Ihre Praxis.",
         testimonial: {
@@ -342,7 +342,7 @@ export default function MasterclassesPage() {
                                 {/* Curriculum */}
                                 <div className="mc-module-reveal">
                                     <h3 className="text-[10px] uppercase tracking-[0.3em] text-brand-gold font-bold mb-6">
-                                        Kursablauf
+                                        Stunden: Kursablauf
                                     </h3>
                                     <div className="space-y-4">
                                         {mc.curriculum.map((day, i) => (
@@ -509,7 +509,7 @@ export default function MasterclassesPage() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
-                            href="mailto:info@beautyakademy.de?subject=Masterclass%20Anfrage"
+                            href="mailto:info@glamour-academy.com?subject=Masterclass%20Anfrage"
                             className="group relative overflow-hidden px-10 py-5 bg-brand-gold text-[#1c1a19] uppercase tracking-[0.2em] text-xs font-bold transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] flex items-center gap-3"
                         >
                             Jetzt Anfragen

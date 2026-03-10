@@ -94,7 +94,7 @@ export function Navbar() {
                         </div>
                         <div className="w-[1px] h-4 bg-[#3e342d]/30 hidden sm:block" />
                         <Link
-                            href="#contact"
+                            href="/kontakt"
                             className="hidden sm:inline-block uppercase tracking-widest border-b-[1.5px] border-[#3e342d] pb-0.5 hover:opacity-60 transition-opacity duration-200 font-semibold"
                         >
                             Contact Us
@@ -148,7 +148,7 @@ export function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="#contact"
+                        href="/kontakt"
                         onClick={closeMenu}
                         className="mt-4 uppercase tracking-widest text-sm border-b-[1.5px] border-[#3e342d] pb-0.5 font-semibold text-[#3e342d] hover:opacity-60 transition-opacity duration-200"
                     >

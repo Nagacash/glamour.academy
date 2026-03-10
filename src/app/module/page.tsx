@@ -38,9 +38,10 @@ const modules = [
         tagline: "Sicherheit ist nicht verhandelbar.",
         icon: ShieldAlert,
         color: "text-red-400",
-        duration: "3 Tage",
+        duration: "2–6 Stunden",
         level: "Einsteiger",
-        price: "1.800€",
+        price: "200€ / Stunde",
+        groupSize: "3–4 Teilnehmer",
         description:
             "Das Fundament jeder erstklassigen Behandlung beginnt mit unerschütterlicher Sicherheit. In diesem Modul erlernen Sie die strengen Hygiene- und OP-Standards, die aus über 30 Jahren klinischer Praxis in der plastischen Chirurgie entstanden sind. Von der sterilen Arbeitsumgebung bis zum Notfallprotokoll — hier wird kein Detail dem Zufall überlassen.",
         topics: [
@@ -136,7 +137,7 @@ const modules = [
         color: "text-violet-400",
         duration: "1,5 Tage",
         level: "Alle Stufen",
-        price: "950€",
+        price: "",
         description:
             "Der unterschätzte Erfolgsfaktor jeder ästhetischen Praxis. Lernen Sie die Psychologie hinter dem Patientenwunsch zu verstehen — von der realistischen Erwartungshaltung bis zur Erkennung von Dysmorphophobie. Dieses Modul macht Sie zur vertrauenswürdigen Beraterin, nicht nur zur Behandlerin.",
         topics: [
@@ -254,7 +255,7 @@ export default function ModulePage() {
     }, []);
 
     const totalPrice = modules.reduce(
-        (sum, m) => sum + parseInt(m.price.replace(/[^\d]/g, "")),
+        (sum, m) => sum + parseInt(m.price.replace(/[^\d]/g, "") || "0"),
         0
     );
     const bundlePrice = Math.round(totalPrice * 0.8);
@@ -430,6 +431,7 @@ export default function ModulePage() {
                                 <div className="lg:col-span-5">
                                     {/* Price Card */}
                                     <div className="mod-reveal border border-white/10 p-8 md:p-10 mb-8 sticky top-8">
+                                        {mod.price && (
                                         <div className="mb-8">
                                             <span className="text-[10px] uppercase tracking-widest text-white/40 font-semibold block mb-2">
                                                 Investment
@@ -438,6 +440,7 @@ export default function ModulePage() {
                                                 {mod.price}
                                             </div>
                                         </div>
+                                        )}
 
                                         <div className="space-y-4 mb-8 pb-8 border-b border-white/10">
                                             <div className="flex items-center gap-3">
@@ -464,6 +467,14 @@ export default function ModulePage() {
                                                     Praxismaterialien inklusive
                                                 </span>
                                             </div>
+                                            {mod.id !== "psychologie" && (
+                                            <div className="flex items-center gap-3">
+                                                <Brain size={14} className="text-brand-champagne-dark" />
+                                                <span className="text-sm text-white/60 font-light">
+                                                    Psychologie-Modul inklusive
+                                                </span>
+                                            </div>
+                                            )}
                                         </div>
 
                                         <button
@@ -563,11 +574,8 @@ export default function ModulePage() {
                         </p>
 
                         <div className="flex items-center justify-center gap-4 mb-10">
-                            <span className="text-white/30 line-through font-serif text-2xl italic">
-                                {totalPrice.toLocaleString("de-DE")}€
-                            </span>
                             <span className="font-serif text-5xl md:text-6xl text-brand-gold italic leading-none">
-                                {bundlePrice.toLocaleString("de-DE")}€
+                                auf Anfrage
                             </span>
                         </div>
 
@@ -588,7 +596,7 @@ export default function ModulePage() {
                         </div>
 
                         <a
-                            href="mailto:info@beautyakademy.de?subject=Artist%20Training%20Komplettpaket"
+                            href="mailto:info@glamour-academy.com?subject=Artist%20Training%20Komplettpaket"
                             className="inline-flex items-center gap-3 px-10 py-5 bg-brand-gold text-[#1c1a19] uppercase tracking-[0.2em] text-xs font-bold hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500"
                         >
                             Komplettpaket anfragen
@@ -615,7 +623,7 @@ export default function ModulePage() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
-                            href="mailto:info@beautyakademy.de?subject=Modul%20Beratung"
+                            href="mailto:info@glamour-academy.com?subject=Modul%20Beratung"
                             className="group px-10 py-5 bg-brand-gold text-[#1c1a19] uppercase tracking-[0.2em] text-xs font-bold hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transition-all duration-500 flex items-center gap-3"
                         >
                             Kostenlose Beratung

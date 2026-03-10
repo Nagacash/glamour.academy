@@ -493,7 +493,7 @@ export default function DatenschutzPage() {
                     </p>
 
                     <a
-                        href="mailto:datenschutz@beautyakademy.com"
+                        href="mailto:datenschutz@glamour-academy.com"
                         className="inline-flex items-center gap-3 px-8 py-4 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-[#1c1a19] transition-all duration-300 text-sm uppercase tracking-wider font-semibold"
                     >
                         <Mail size={16} />
@@ -504,7 +504,7 @@ export default function DatenschutzPage() {
                         <p>
                             Datenschutzbeauftragter:{" "}
                             <span className="text-brand-champagne">
-                                datenschutz@beautyakademy.com
+                                datenschutz@glamour-academy.com
                             </span>
                         </p>
                         <p>
