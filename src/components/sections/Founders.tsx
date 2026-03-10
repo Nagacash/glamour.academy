@@ -12,7 +12,7 @@ const founders = [
         name: "Sonja Ackermann",
         role: "Krankenschwester & Heilpraktikerin",
         title: "Medizinische Leitung",
-        image: "/images/team2.webp",
+        image: "/images/team7.webp",
         intro: "Im Dienste der Gesundheit: Sonja ist seit über 30 Jahren medizinisch tätig. Ihre Laufbahn begann in der Gynäkologie und Onkologie sowie der OP-Pflege für Plastische Chirurgie. Seit 2011 ist sie in eigener Praxis in Hamburg Schnelsen tätig und vereint fundiertes klinisches Wissen mit modernster mitochondrialer Medizin und funktioneller Stressmedizin.",
         qualifications: [
             "Examen AK St. Georg, Hamburg",

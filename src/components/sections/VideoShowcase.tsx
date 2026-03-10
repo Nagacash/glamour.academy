@@ -9,14 +9,14 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 gsap.registerPlugin(ScrollTrigger);
 
 const clips = [
-    { src: "/clips/clip1.mp4", alt: "Glamour Academy Highlight 1" },
-    { src: "/clips/clip2.mp4", alt: "Glamour Academy Highlight 2" },
-    { src: "/clips/clip3.mp4", alt: "Glamour Academy Highlight 3" },
+    { src: "/clips/clip1.mp4", alt: "Glamour Academy Highlight 1", title: "Infusionstherapie" },
+    { src: "/clips/clip2.mp4", alt: "Glamour Academy Highlight 2", title: "Lipolyse" },
+    { src: "/clips/clip3.mp4", alt: "Glamour Academy Highlight 3", title: "Fadenlifting" },
 ];
 
 function ClipCard({ clip, index }: { clip: typeof clips[number]; index: number }) {
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [playing, setPlaying] = useState(true);
+    const [playing, setPlaying] = useState(false);
 
     const toggle = useCallback(() => {
         const video = videoRef.current;
@@ -34,14 +34,14 @@ function ClipCard({ clip, index }: { clip: typeof clips[number]; index: number }
         <GlowCard
             glowColor="orange"
             customSize
-            className="video-item !p-0 !gap-0 !shadow-2xl !shadow-brand-champagne/10 aspect-[9/16] bg-[#1c1a19] group"
+            className="w-full !p-0 !gap-0 !shadow-2xl !shadow-brand-champagne/10 aspect-[9/16] bg-[#1c1a19] group"
         >
             <video
                 ref={videoRef}
-                autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 src={clip.src}
                 title={clip.alt}
                 className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 rounded-2xl"
@@ -83,8 +83,11 @@ export function VideoShowcase() {
     const containerRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
+        const items = containerRef.current?.querySelectorAll(".video-item");
+        if (!items?.length) return;
+
         const ctx = gsap.context(() => {
-            gsap.fromTo(".video-item",
+            gsap.fromTo(items,
                 { y: 60, opacity: 0 },
                 {
                     y: 0,
@@ -120,7 +123,12 @@ export function VideoShowcase() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {clips.map((clip, index) => (
-                        <ClipCard key={index} clip={clip} index={index} />
+                        <div key={index} className="video-item flex flex-col items-center gap-4">
+                            <h3 className="font-serif text-xl md:text-2xl text-foreground tracking-wide">
+                                {clip.title}
+                            </h3>
+                            <ClipCard clip={clip} index={index} />
+                        </div>
                     ))}
                 </div>
             </div>

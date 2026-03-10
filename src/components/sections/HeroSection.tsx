@@ -78,7 +78,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                     <div className="hero-text flex items-center gap-2 mb-6">
                         <span className="h-[1px] w-8 bg-brand-gold/60" />
                         <span className="text-brand-gold font-medium tracking-[0.3em] text-xs uppercase">
-                            Premium Aesthetic Academy
+                        HEALTH AND BEAUTY
                         </span>
                     </div>
 
@@ -89,8 +89,8 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                     </h1>
 
                     <p className="hero-text text-brand-foreground/70 text-lg md:text-xl font-light mb-12 max-w-lg leading-relaxed">
-                        Erfolg ist kein Zufall, sondern die Summe aus Präzision
-                        und dem richtigen Glamour-Branding.
+                    PDO‑Fadenlifting — Praxisnahe Weiterbildung für sicheres Lifting; Zertifikat nach praktischer Demonstration.
+
                     </p>
 
                     <div className="hero-text flex flex-wrap items-center gap-6">
@@ -145,7 +145,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                             className="hero-image-reveal relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.12)] border border-white/40"
                         >
                             <img
-                                src="/images/hero/hero-focal.png"
+                                src="/images/hero/glam1.webp"
                                 alt="Elite Beauty Professional"
                                 className="w-full h-full object-cover scale-105"
                                 width={1000}

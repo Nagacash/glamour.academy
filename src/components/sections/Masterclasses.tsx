@@ -45,44 +45,37 @@ export function Masterclasses() {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Header animation
-            gsap.from(".mc-header-text", {
-                y: 60,
-                opacity: 0,
-                duration: 1.2,
-                stagger: 0.2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: headerRef.current,
-                    start: "top 85%",
-                },
-            });
+            gsap.fromTo(".mc-header-text",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    stagger: 0.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: headerRef.current,
+                        start: "top 85%",
+                    },
+                }
+            );
 
             // Cards animation
-            gsap.from(".mc-card-reveal", {
-                y: 80,
-                opacity: 0,
-                duration: 1.4,
-                stagger: 0.3,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: ".mc-grid",
-                    start: "top 80%",
-                },
-            });
-
-            // Parallax on images - reduced movement to avoid sub-pixel blur
-            gsap.utils.toArray<HTMLElement>(".mc-image-parallax").forEach((img) => {
-                gsap.to(img, {
-                    y: "10%",
-                    ease: "none",
+            gsap.fromTo(".mc-card-reveal",
+                { y: 80, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.4,
+                    stagger: 0.3,
+                    ease: "power4.out",
                     scrollTrigger: {
-                        trigger: img,
-                        start: "top bottom",
-                        end: "bottom top",
-                        scrub: 1,
+                        trigger: ".mc-grid",
+                        start: "top 80%",
                     },
-                });
-            });
+                }
+            );
+
         }, containerRef);
 
         return () => ctx.revert();
@@ -92,14 +85,14 @@ export function Masterclasses() {
         <section
             ref={containerRef}
             id="masterclasses"
-            className="relative py-20 lg:py-28 overflow-hidden bg-brand-beige"
+            className="relative py-14 lg:py-20 overflow-hidden bg-brand-beige"
         >
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand-champagne/10 to-transparent pointer-events-none" />
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div ref={headerRef} className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 mb-16 lg:mb-20">
+                <div ref={headerRef} className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-14 lg:mb-16">
                     <div className="w-full lg:w-1/2">
                         <div className="mc-header-text mb-4 inline-flex items-center gap-3">
                             <div className="h-px w-12 bg-brand-gold"></div>
@@ -147,11 +140,11 @@ export function Masterclasses() {
                             className="mc-card-reveal group relative flex flex-col h-full bg-white border border-brand-champagne/40 overflow-hidden transition-all duration-700 hover:border-brand-gold/40 shadow-sm hover:shadow-xl"
                         >
                             {/* Image Container */}
-                            <div className="relative h-[400px] overflow-hidden bg-white">
+                            <div className="relative h-[280px] lg:h-[320px] overflow-hidden bg-white">
                                 <img
                                     src={cls.image}
                                     alt={cls.title}
-                                    className="mc-image-parallax w-full h-full object-cover scale-105 transition-transform duration-1000 group-hover:scale-100"
+                                    className="mc-image-parallax w-full h-full object-cover"
                                 />
 
                                 <div className="absolute inset-0 bg-black/5 z-10 transition-opacity duration-700 group-hover:opacity-0" />
@@ -176,8 +169,8 @@ export function Masterclasses() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-10 flex flex-col flex-grow">
-                                <div className="flex justify-between items-center mb-8">
+                            <div className="p-6 lg:p-8 flex flex-col flex-grow">
+                                <div className="flex justify-between items-center mb-5">
                                     <div>
                                         <span className="text-[10px] text-brand-gold/80 uppercase tracking-[0.3em] font-semibold block mb-1">Module {i + 1}</span>
                                         <h3 className="font-serif text-3xl text-[#1c1a19]">{cls.title}</h3>
@@ -187,7 +180,7 @@ export function Masterclasses() {
                                     </div>
                                 </div>
 
-                                <div className="space-y-6 mb-10">
+                                <div className="space-y-4 mb-6">
                                     <div>
                                         <span className="text-[10px] uppercase tracking-widest text-[#1c1a19]/50 block mb-4 font-bold">Schlüsseltechniken</span>
                                         <ul className="space-y-3">
@@ -201,7 +194,7 @@ export function Masterclasses() {
                                     </div>
                                 </div>
 
-                                <div className="mt-auto pt-8 border-t border-brand-champagne/50">
+                                <div className="mt-auto pt-5 border-t border-brand-champagne/50">
                                     <div className="flex items-start gap-4">
                                         <div className="mt-1 bg-brand-beige p-1.5 rounded">
                                             <Sparkles className="w-4 h-4 text-brand-gold" />

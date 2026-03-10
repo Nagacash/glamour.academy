@@ -8,11 +8,12 @@ import { ArrowRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const treatments = [
-    { name: "Anti-Aging Konzepte", description: "Mitochondriale und zelluläre Verjüngung auf höchstem Niveau.", price: "ab 150€" },
-    { name: "Lippenauffüllung", description: "Natürliche Formung und Konturierung mit Premium-Hyaluron.", price: "ab 280€" },
-    { name: "Fadenlifting", description: "Sanftes Lifting für definierte Gesichtszüge ohne Skalpell.", price: "ab 350€" },
-    { name: "Injektionslipolyse", description: "Die Fett-weg-Spritze für gezielte Körper- und Gesichtskontur.", price: "ab 190€" },
-    { name: "Lymphdrainage", description: "Entstauung und Straffung für ein rosiges, klares Hautbild.", price: "ab 85€" },
+    { name: "PDO", description: "Fadenlifting mit resorbierbaren PDO-Fäden für natürliche Straffung.", price: "200€" },
+    { name: "Hyaluron", description: "Volumenauffüllung und Konturierung mit Premium-Hyaluronsäure.", price: "200€" },
+    { name: "Lipolyse", description: "Injektionslipolyse zur gezielten Fettreduktion und Körperkonturierung.", price: "200€" },
+    { name: "Mesotherapie", description: "Mikro-Injektionen mit Wirkstoffen für Hautverjüngung und Revitalisierung.", price: "200€" },
+    { name: "Drip-Spa Infusionskonzepte", description: "Intravenöse Nährstoff-Infusionen für Regeneration und Vitalität.", price: "200€" },
+    { name: "Beratung zur Ausstattung einer Invasivpraxis", description: "Individuelle Beratung zu Praxisausstattung und -konzeption.", price: "200€" },
 ];
 
 export function TreatmentsOverview() {
@@ -62,8 +63,8 @@ export function TreatmentsOverview() {
                         Exklusive Aesthetics
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.1] mb-8">
-                        Treatments &amp;<br />
-                        <span className="italic font-light text-brand-champagne-dark">Rejuvenation</span>
+                        Module &amp;<br />
+                        <span className="italic font-light text-brand-champagne-dark">Ausbildung</span>
                     </h2>
                     <p className="text-foreground/70 font-light leading-relaxed mb-10">
                         Jede Behandlung ist ein holistischer Prozess. Wir kombinieren die modernsten Techniken mit hochwirksamen, sicheren Präparaten, um Ihre natürliche Ausstrahlung zu perfektionieren.
@@ -71,7 +72,7 @@ export function TreatmentsOverview() {
                     <div className="h-[1px] w-12 bg-brand-gold mb-10"></div>
 
                     <img
-                        src="/images/team3.webp"
+                        src="/images/team6.webp"
                         alt="Treatment product macro"
                         width={534}
                         height={668}
