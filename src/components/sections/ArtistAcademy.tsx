@@ -86,8 +86,9 @@ export function ArtistAcademy() {
                 </h2>
                 <p className="academy-quote font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.2] text-white/90">
                     &ldquo;Erfolg ist kein Zufall, <br className="hidden md:block" />
-                    <span className="italic font-light text-brand-champagne">sondern die Summe aus meisterhafte Wissen und praktischem können. Dafür stehen wir mit unserer Akademie.
-                        Möchtest du eintauchen in die Welt der Meisterschaften Beauty Behandlungen, dann bist du bei uns richtig.&rdquo;</span>
+                    <span className="italic font-light text-brand-champagne">Es ist die Summe aus meisterhaftem Wissen und praktischem Können. Dafür steht unsere Akademie.
+
+                        Wenn du in die Welt der meisterhaften und Beauty-Behandlungen eintauchen möchtest, bist du bei uns richtig.&rdquo;</span>
                 </p>
 
                 <div className="academy-gold-line mt-16 w-[1px] h-24 bg-gradient-to-b from-brand-gold to-transparent mx-auto origin-top scale-y-0"></div>

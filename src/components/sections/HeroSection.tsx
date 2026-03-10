@@ -82,23 +82,22 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                         </span>
                     </div>
 
-                    <h1 className="hero-text font-serif text-brand-foreground text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[1.05] tracking-tight mb-8">
+                    <h1 className="hero-text font-serif text-brand-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight mb-8">
                         The Glamour Akademie of <br />
                         <span className="italic font-light">Hamburg</span>{" "}
                         Beauty
                     </h1>
 
-                    <p className="hero-text text-brand-foreground/70 text-lg md:text-xl font-light mb-12 max-w-lg leading-relaxed">
+                    <p className="hero-text text-brand-foreground/70 text-base sm:text-lg md:text-xl font-light mb-12 max-w-lg leading-relaxed">
                     PDO‑Fadenlifting — Praxisnahe Weiterbildung für sicheres Lifting; Zertifikat nach praktischer Demonstration.
-
                     </p>
 
-                    <div className="hero-text flex flex-wrap items-center gap-6">
+                    <div className="hero-text flex flex-wrap items-center gap-4 sm:gap-6">
                         {onOpenAssistant && (
                             <button
                                 type="button"
                                 onClick={onOpenAssistant}
-                                className="px-10 py-5 bg-[#1c1a19] text-white rounded-full font-bold text-xs tracking-[0.2em] hover:bg-brand-gold transition-all duration-500 shadow-2xl hover:shadow-brand-gold/20 flex items-center gap-3 group"
+                                className="px-6 sm:px-10 py-4 sm:py-5 bg-[#1c1a19] text-white rounded-full font-bold text-[10px] sm:text-xs tracking-[0.2em] hover:bg-brand-gold transition-all duration-500 shadow-2xl hover:shadow-brand-gold/20 flex items-center gap-3 group"
                             >
                                Spreche mit AI Susi - dein persönlicher Assistent
                                 <Headphones
@@ -109,7 +108,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                         )}
                         <Link
                             href="#academy"
-                            className="px-10 py-5 border-2 border-[#1c1a19] text-[#1c1a19] rounded-full font-bold text-xs tracking-[0.2em] hover:bg-[#1c1a19] hover:text-white transition-all duration-500 flex items-center gap-3 group"
+                            className="px-6 sm:px-10 py-4 sm:py-5 border-2 border-[#1c1a19] text-[#1c1a19] rounded-full font-bold text-[10px] sm:text-xs tracking-[0.2em] hover:bg-[#1c1a19] hover:text-white transition-all duration-500 flex items-center gap-3 group"
                         >
                             JOIN THE ACADEMY
                             <Sparkles
@@ -122,13 +121,13 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                             href="#showcase"
                             className="flex items-center gap-4 group"
                         >
-                            <div className="w-14 h-14 rounded-full border border-brand-foreground/10 flex items-center justify-center group-hover:bg-brand-gold/5 transition-colors duration-300">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-brand-foreground/10 flex items-center justify-center group-hover:bg-brand-gold/5 transition-colors duration-300">
                                 <Play
                                     size={18}
                                     className="text-brand-foreground ml-1"
                                 />
                             </div>
-                            <span className="text-brand-foreground font-semibold text-xs tracking-widest uppercase border-b border-brand-foreground/20 pb-1 group-hover:border-brand-gold transition-colors">
+                            <span className="text-brand-foreground font-semibold text-[10px] sm:text-xs tracking-widest uppercase border-b border-brand-foreground/20 pb-1 group-hover:border-brand-gold transition-colors">
                                 Roomtour
                             </span>
                         </Link>
@@ -155,7 +154,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                         </div>
 
                         {/* Card 1: Stats — desktop only, overlaps left edge */}
-                        <div className="floating-card absolute -left-8 top-1/4 bg-white/70 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/50 w-48 hidden md:block z-30">
+                        <div className="floating-card absolute -left-4 lg:-left-8 top-1/4 bg-white/70 backdrop-blur-xl rounded-3xl p-4 lg:p-6 shadow-2xl border border-white/50 w-40 lg:w-48 hidden lg:block z-30">
                             <div className="flex items-center gap-3 mb-3">
                                 <div className="p-2 bg-brand-gold/10 rounded-lg">
                                     <Award
@@ -176,8 +175,8 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                         </div>
 
                         {/* Card 2: Micro Detail — xl only */}
-                        <div className="floating-card absolute -right-4 bottom-20 bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-4 shadow-2xl border border-white/50 w-64 hidden xl:block z-30">
-                            <div className="relative aspect-video rounded-2xl overflow-hidden mb-4">
+                        <div className="floating-card absolute -right-2 bottom-20 bg-white/80 backdrop-blur-xl rounded-[2rem] p-3 shadow-2xl border border-white/50 w-48 hidden xl:block z-30">
+                            <div className="relative aspect-video rounded-xl overflow-hidden mb-2">
                                 <img
                                     src="/images/hero/texture-macro.png"
                                     alt="Skin Texture Detail"
@@ -186,15 +185,15 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                                 <div className="absolute inset-0 flex items-center justify-center bg-black/5">
                                     <Sparkles
                                         className="text-white/80"
-                                        size={24}
+                                        size={18}
                                     />
                                 </div>
                             </div>
-                            <div className="px-2 pb-2">
-                                <h4 className="text-sm font-bold tracking-tight text-brand-foreground mb-1">
-                                    Molecular Aesthetics
+                            <div className="px-1 pb-1">
+                                <h4 className="text-xs font-bold tracking-tight text-brand-foreground mb-0.5">
+                                    Beauty Drip Spa Infusions
                                 </h4>
-                                <p className="text-[10px] text-brand-foreground/50 leading-relaxed uppercase tracking-widest font-medium">
+                                <p className="text-[9px] text-brand-foreground/50 leading-relaxed uppercase tracking-widest font-medium">
                                     Radiant Protocol v2.4
                                 </p>
                             </div>
@@ -202,7 +201,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                     </div>
 
                     {/* Trust Badge — always in flow, uses negative margin to overlap image */}
-                    <div className="floating-card -mt-8 relative z-40 bg-brand-gold text-white rounded-full py-3 px-8 flex items-center gap-4 shadow-2xl">
+                    <div className="floating-card -mt-8 relative z-40 bg-brand-gold text-white rounded-full py-3 px-4 sm:px-8 flex items-center gap-3 sm:gap-4 shadow-2xl">
                         <div className="flex -space-x-3">
                             {[1, 2, 3].map((i) => (
                                 <div
@@ -245,7 +244,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
 
             {/* Design detail: Large faded text in background */}
             <div className="absolute bottom-28 left-6 lg:left-20 pointer-events-none select-none hidden md:block z-0">
-                <span className="text-[100px] lg:text-[140px] xl:text-[180px] font-serif italic text-brand-foreground/[0.04] leading-none tracking-tight">
+                <span className="text-[80px] lg:text-[120px] xl:text-[160px] font-serif italic text-brand-foreground/[0.04] leading-none tracking-tight">
                     Excellence
                 </span>
             </div>
