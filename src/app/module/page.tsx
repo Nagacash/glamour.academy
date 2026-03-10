@@ -71,9 +71,10 @@ const modules = [
         tagline: "Wissen, das unter die Haut geht.",
         icon: Microscope,
         color: "text-blue-400",
-        duration: "4 Tage",
+        duration: "2–6 Stunden",
         level: "Einsteiger – Fortgeschritten",
-        price: "2.400€",
+        price: "200€ / Stunde",
+        groupSize: "3–4 Teilnehmer",
         description:
             "Wahre Meisterschaft beginnt mit tiefem Verständnis. Dieses Modul vermittelt fundiertes Wissen über die Gesichtsanatomie — Gefäßverläufe, Nervenversorgung, Gefahrenzonen. Kombiniert mit umfassender Produktkunde zu Hyaluronsäure, PDO-Fäden und Kollagenstimulatoren. Sie lernen nicht nur WAS Sie injizieren, sondern WARUM und WOHIN.",
         topics: [
@@ -103,9 +104,10 @@ const modules = [
         tagline: "Heilung von innen nach außen.",
         icon: Syringe,
         color: "text-emerald-400",
-        duration: "2 Tage",
+        duration: "2–6 Stunden",
         level: "Fortgeschritten",
-        price: "1.500€",
+        price: "200€ / Stunde",
+        groupSize: "3–4 Teilnehmer",
         description:
             "Die Kunst der individualisierten Wirkstofftherapie. Erlernen Sie die Zusammenstellung hochpotenter Vitamin-Cocktails, NAD+ Infusionstherapien und Mesotherapie-Protokolle, die auf zellulärer Ebene wirken. Von der mitochondrialen Medizin bis zur regenerativen Hautverjüngung — Ihr Werkzeugkasten für langfristige Ergebnisse.",
         topics: [
@@ -135,9 +137,10 @@ const modules = [
         tagline: "Schönheit beginnt im Gespräch.",
         icon: Brain,
         color: "text-violet-400",
-        duration: "1,5 Tage",
-        level: "Alle Stufen",
-        price: "",
+        duration: "2–6 Stunden",
+        level: "Alle Module",
+        price: "0€ / Stunde",
+        groupSize: "3–4 Teilnehmer",
         description:
             "Der unterschätzte Erfolgsfaktor jeder ästhetischen Praxis. Lernen Sie die Psychologie hinter dem Patientenwunsch zu verstehen — von der realistischen Erwartungshaltung bis zur Erkennung von Dysmorphophobie. Dieses Modul macht Sie zur vertrauenswürdigen Beraterin, nicht nur zur Behandlerin.",
         topics: [
@@ -167,9 +170,10 @@ const modules = [
         tagline: "Ihre Praxis. Ihr Unternehmen.",
         icon: Briefcase,
         color: "text-amber-400",
-        duration: "2 Tage",
+        duration: "2–6 Stunden",
         level: "Alle Stufen",
-        price: "1.200€",
+        price: "200€ / Stunde",
+        groupSize: "3–4 Teilnehmer",
         description:
             "Exzellenz allein reicht nicht — Sie brauchen ein funktionierendes Business drumherum. Von der Abrechnung über Material-Sourcing bis zur Räumlichkeits-Analyse: Dieses Modul macht aus Ihrer medizinischen Expertise ein profitables, nachhaltiges Unternehmen. Inklusive Marketing-Grundlagen und Social-Media-Strategie.",
         topics: [
@@ -430,7 +434,7 @@ export default function ModulePage() {
                                 {/* Right: Price + Testimonial */}
                                 <div className="lg:col-span-5">
                                     {/* Price Card */}
-                                    <div className="mod-reveal border border-white/10 p-8 md:p-10 mb-8 sticky top-8">
+                                    <div className="mod-reveal border border-white/10 p-8 md:p-10 mb-8 lg:sticky lg:top-24">
                                         {mod.price && (
                                         <div className="mb-8">
                                             <span className="text-[10px] uppercase tracking-widest text-white/40 font-semibold block mb-2">
@@ -452,7 +456,7 @@ export default function ModulePage() {
                                             <div className="flex items-center gap-3">
                                                 <Users size={14} className="text-brand-champagne-dark" />
                                                 <span className="text-sm text-white/60 font-light">
-                                                    Max. 8 Teilnehmer
+                                                    Max. 3-4 Teilnehmer
                                                 </span>
                                             </div>
                                             <div className="flex items-center gap-3">
