@@ -633,10 +633,10 @@ export default function ModulePage() {
                             />
                         </a>
                         <a
-                            href="tel:+491234567890"
+                            href="tel:+4917661639830"
                             className="px-10 py-5 border border-white/20 text-white/60 uppercase tracking-[0.2em] text-xs font-bold hover:border-brand-gold hover:text-brand-gold transition-all duration-300"
                         >
-                            +49 (0) 123 456 789
+                            +49 0176 61639830
                         </a>
                     </div>
 

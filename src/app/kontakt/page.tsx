@@ -80,7 +80,7 @@ export default function KontaktPage() {
                                 </a>
 
                                 <a
-                                    href="tel:+491234567890"
+                                    href="tel:+4917661639830"
                                     className="flex items-start gap-4 group"
                                 >
                                     <Phone size={18} className="text-brand-gold mt-0.5" />
@@ -89,7 +89,7 @@ export default function KontaktPage() {
                                             Telefon
                                         </span>
                                         <span className="text-white/80 font-light group-hover:text-brand-gold transition-colors">
-                                            +49 (0) 123 456 789
+                                            +49 0176 61639830
                                         </span>
                                     </div>
                                 </a>

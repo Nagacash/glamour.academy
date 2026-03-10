@@ -46,7 +46,7 @@ export function Footer() {
                     <ul className="space-y-4 text-sm text-gray-400 font-light">
                         <li className="flex items-center space-x-3">
                             <Phone size={16} className="text-brand-champagne-dark" />
-                            <span>+49 (0) 123 456 789</span>
+                            <span>+49 0176 61639830</span>
                         </li>
                         <li className="flex items-center space-x-3">
                             <Mail size={16} className="text-brand-champagne-dark" />
