@@ -12,8 +12,9 @@ const founders = [
         name: "Sonja Ackermann",
         role: "Krankenschwester & Heilpraktikerin",
         title: "Medizinische Leitung",
-        image: "/images/team7.webp",
+        image: "/images/team9.webp",
         intro: "Im Dienste der Gesundheit: Sonja ist seit über 30 Jahren medizinisch tätig. Ihre Laufbahn begann in der Gynäkologie und Onkologie sowie der OP-Pflege für Plastische Chirurgie. Seit 2011 ist sie in eigener Praxis in Hamburg Schnelsen tätig und vereint fundiertes klinisches Wissen mit modernster mitochondrialer Medizin und funktioneller Stressmedizin.",
+        website: "https://www.heilpraktikerin-ackermann.de/",
         qualifications: [
             "Examen AK St. Georg, Hamburg",
             "OP Krankenschwester Plastische Chirurgie (Klinik Pöseldorf)",
@@ -34,6 +35,7 @@ const founders = [
         title: "Ästhetische Leitung",
         image: "/images/team1.webp",
         intro: "Schönheit als Berufung: Annette ist seit über 30 Jahren leidenschaftlich in der Schönheitsbranche tätig. Als Expertin für Anti-Aging und Bodyforming bei Mesoskin Hamburg ist sie spezialisiert auf Hyaluron, PDO-Fäden und Infusionstherapien. Ihre Philosophie: Ein harmonisches Zusammenspiel von innerem Wohlbefinden und äußerer Ausstrahlung.",
+        website: "https://www.mesoskin-hamburg.com/",
         qualifications: [
             "Heilpraktikerin seit 1995",
             "Gründerin Mesoskin Hamburg",
@@ -158,6 +160,17 @@ export function Founders() {
                                 <p className="text-foreground/70 font-light leading-relaxed mb-8">
                                     {founder.intro}
                                 </p>
+
+                                {founder.website && (
+                                    <a
+                                        href={founder.website}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block text-sm text-brand-gold hover:text-brand-champagne-dark transition-colors duration-300 mb-8 font-light tracking-wide"
+                                    >
+                                        → Website besuchen
+                                    </a>
+                                )}
 
                                 {/* Qualifications */}
                                 <div className="mb-8">

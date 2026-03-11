@@ -89,7 +89,7 @@ export function HeroSection({ onOpenAssistant }: HeroSectionProps) {
                     </h1>
 
                     <p className="hero-text text-brand-foreground/70 text-base sm:text-lg md:text-xl font-light mb-12 max-w-lg leading-relaxed">
-                    PDO‑Fadenlifting — Praxisnahe Weiterbildung für sicheres Lifting; Zertifikat nach praktischer Demonstration.
+                    — Praxisnahe Weiterbildung für sicheres Lifting; Zertifikat nach praktischer Demonstration.
                     </p>
 
                     <div className="hero-text flex flex-wrap items-center gap-4 sm:gap-6">

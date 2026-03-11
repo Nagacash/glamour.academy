@@ -16,6 +16,7 @@ const classes = [
         image: "/images/masterclasses/lips.png",
         techniques: ["Russian Lips", "M-Shape", "Klassische Kontur"],
         bonus: "Social Media Lip Branding Guide",
+        requirement: "Grundvoraussetzung: Heilpraktiker/in und Ärzte",
         icon: <Sparkles className="w-5 h-5" />,
     },
     {
@@ -25,6 +26,7 @@ const classes = [
         image: "/images/masterclasses/face.png",
         techniques: ["Wangenaufbau", "Jawline", "Kinnkorrektur"],
         bonus: "Anatomie & Notfallmanagement Kurs",
+        requirement: "Grundvoraussetzung: Heilpraktiker/in und Ärzte",
         icon: <Trophy className="w-5 h-5" />,
     },
     {
@@ -34,6 +36,7 @@ const classes = [
         image: "/images/masterclasses/glow.png",
         techniques: ["Skinbooster", "Mesotherapie", "Bio-Remodellierung"],
         bonus: "Skin Cocktail Rezepturen",
+        requirement: "Grundvoraussetzung: Heilpraktiker/in und Ärzte",
         icon: <Users className="w-5 h-5" />,
     },
 ];
@@ -110,13 +113,13 @@ export function Masterclasses() {
                         </p>
                         <div className="mc-header-text space-y-4 text-sm text-[#1c1a19]/60 font-light leading-relaxed max-w-lg">
                             <p>
-                                Unsere Masterclasses vereinen über 60 Jahre klinische Erfahrung in kompakten, 
-                                praxisorientierten Intensivkursen. Jede Einheit wird von erfahrenen Fachärztinnen 
+                                Unsere Masterclasses vereinen über 60 Jahre klinische Erfahrung in kompakten,
+                                praxisorientierten Intensivkursen. Jede Einheit wird von erfahrenen Fachärztinnen
                                 und Heilpraktikerinnen geleitet, die ihr Wissen aus Hunderten realer Behandlungen einbringen.
                             </p>
                             <p>
-                                Von fortgeschrittenen Injektionstechniken bis hin zu innovativen Anti-Aging-Protokollen — 
-                                unsere Module sind darauf ausgelegt, Ihre Fähigkeiten auf das nächste Level zu heben. 
+                                Von fortgeschrittenen Injektionstechniken bis hin zu innovativen Anti-Aging-Protokollen —
+                                unsere Module sind darauf ausgelegt, Ihre Fähigkeiten auf das nächste Level zu heben.
                                 Kleine Gruppengrößen garantieren individuelles Feedback und maximalen Lernerfolg.
                             </p>
                         </div>

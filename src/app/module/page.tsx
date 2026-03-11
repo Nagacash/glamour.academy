@@ -456,6 +456,13 @@ export default function ModulePage() {
                                             <div className="flex items-center gap-3">
                                                 <Users size={14} className="text-brand-champagne-dark" />
                                                 <span className="text-sm text-white/60 font-light">
+                                                Grundvoraussetzung: Heilpraktiker/in und Ärzte
+                                                </span>
+                                            </div>
+                                            
+                                            <div className="flex items-center gap-3">
+                                                <Users size={14} className="text-brand-champagne-dark" />
+                                                <span className="text-sm text-white/60 font-light">
                                                     Max. 3-4 Teilnehmer
                                                 </span>
                                             </div>
