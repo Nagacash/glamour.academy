@@ -197,6 +197,14 @@ export function Masterclasses() {
                                     </div>
                                 </div>
 
+                                {cls.requirement && (
+                                    <div className="mb-6 px-4 py-3 border border-brand-gold/30 bg-brand-gold/5">
+                                        <p className="text-xs text-[#1c1a19]/70 font-semibold tracking-wide">
+                                            {cls.requirement}
+                                        </p>
+                                    </div>
+                                )}
+
                                 <div className="mt-auto pt-5 border-t border-brand-champagne/50">
                                     <div className="flex items-start gap-4">
                                         <div className="mt-1 bg-brand-beige p-1.5 rounded">

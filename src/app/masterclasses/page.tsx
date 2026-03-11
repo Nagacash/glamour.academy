@@ -402,6 +402,13 @@ export default function MasterclassesPage() {
                                         </div>
                                     </div>
 
+                                    {/* Requirement */}
+                                    <div className="mb-8 px-4 py-3 border border-brand-gold/30 bg-brand-gold/5">
+                                        <p className="text-xs text-white/70 font-semibold tracking-wide">
+                                            Grundvoraussetzung: Heilpraktiker/in und Ärzte
+                                        </p>
+                                    </div>
+
                                     {/* Bonus */}
                                     <div className="mb-8">
                                         <div className="flex items-center gap-2 mb-3">
