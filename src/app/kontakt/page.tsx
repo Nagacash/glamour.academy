@@ -41,7 +41,7 @@ export default function KontaktPage() {
                         </span>
                     </div>
 
-                    <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl text-white leading-[0.95] mb-8">
+                    <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] mb-8">
                         Sprechen Sie<br />
                         <span className="italic font-light text-brand-champagne">mit uns.</span>
                     </h1>

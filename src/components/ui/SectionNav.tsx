@@ -59,7 +59,7 @@ export function SectionNav() {
 
     return (
         <div
-            className={`fixed right-6 bottom-8 z-[100] flex flex-col items-center gap-2 transition-[opacity,transform] duration-500 ${
+            className={`fixed right-4 bottom-6 md:right-6 md:bottom-8 z-[100] flex flex-col items-center gap-2 transition-[opacity,transform] duration-500 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
             }`}
         >

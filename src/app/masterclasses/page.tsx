@@ -223,7 +223,7 @@ export default function MasterclassesPage() {
                         </span>
                     </div>
 
-                    <h1 className="mc-page-hero-text font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-[0.95] mb-8">
+                    <h1 className="mc-page-hero-text font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.95] mb-8">
                         Master<br />
                         <span className="italic font-light text-brand-champagne">classes</span>
                     </h1>
@@ -371,7 +371,7 @@ export default function MasterclassesPage() {
                             {/* Right: Pricing Card + Testimonial */}
                             <div className="lg:col-span-5">
                                 {/* Pricing Card */}
-                                <div className="mc-module-reveal border border-white/10 p-8 md:p-10 mb-8 sticky top-8">
+                                <div className="mc-module-reveal border border-white/10 p-8 md:p-10 mb-8 lg:sticky lg:top-8">
                                     <div className="mb-8">
                                         <span className="text-[10px] uppercase tracking-widest text-white/40 font-semibold block mb-2">
                                             Investment

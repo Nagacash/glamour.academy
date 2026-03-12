@@ -4,7 +4,7 @@ import { Instagram, Facebook, Phone, Mail } from "lucide-react";
 export function Footer() {
     return (
         <footer className="bg-[#1c1a19] text-white pt-20 pb-10 border-t border-brand-champagne/10">
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div className="md:col-span-1">
                     <h2 className="font-serif text-2xl tracking-widest mb-6">BeautyAkademy</h2>
                     <p className="text-gray-400 text-sm leading-relaxed mb-6 font-sans font-light">

@@ -292,7 +292,7 @@ export default function ModulePage() {
                         </span>
                     </div>
 
-                    <h1 className="mod-hero-text font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-[0.95] mb-8">
+                    <h1 className="mod-hero-text font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[0.95] mb-8">
                         Artist<br />
                         <span className="italic font-light text-brand-champagne">Module</span>
                     </h1>

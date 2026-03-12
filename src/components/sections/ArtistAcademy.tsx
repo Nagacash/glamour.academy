@@ -69,7 +69,7 @@ export function ArtistAcademy() {
         <section
             ref={containerRef}
             id="academy"
-            className="relative py-40 overflow-hidden bg-[#1c1a19] text-white flex items-center justify-center text-center"
+            className="relative py-20 md:py-40 overflow-hidden bg-[#1c1a19] text-white flex items-center justify-center text-center"
         >
             <div
                 className="parallax-bg absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30"

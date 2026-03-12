@@ -55,8 +55,8 @@ export function TreatmentsOverview() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="treatments" className="py-32 px-6 bg-white relative">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-start">
+        <section ref={sectionRef} id="treatments" className="py-16 md:py-32 px-6 bg-white relative">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-20 items-start">
                 {/* Left Side: Sticky Intro */}
                 <div className="md:w-1/3 md:sticky md:top-32 treatment-header">
                     <span className="text-brand-gold uppercase tracking-[0.2em] font-semibold text-xs mb-4 inline-block">

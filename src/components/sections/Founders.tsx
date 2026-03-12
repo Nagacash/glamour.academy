@@ -139,7 +139,7 @@ export function Founders() {
                             className="founder-card bg-white mt-8 lg:mt-0 flex flex-col group overflow-hidden"
                         >
                             {/* Image */}
-                            <GlareCard className="relative h-96 md:h-[500px] w-full aspect-[3/4]">
+                            <GlareCard className="relative h-96 md:h-[500px] w-full">
                                 <img
                                     src={founder.image}
                                     alt={founder.name}
@@ -147,8 +147,8 @@ export function Founders() {
                                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#1c1a19]/80 via-transparent to-transparent pointer-events-none"></div>
-                                <div className="absolute bottom-0 left-0 right-0 p-8 pointer-events-none z-10">
-                                    <h3 className="font-serif text-3xl text-white mb-1">{founder.name}</h3>
+                                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 pointer-events-none z-10">
+                                    <h3 className="font-serif text-2xl md:text-3xl text-white mb-1">{founder.name}</h3>
                                     <p className="text-brand-champagne text-sm font-light">
                                         {founder.role} | {founder.title}
                                     </p>
@@ -156,7 +156,7 @@ export function Founders() {
                             </GlareCard>
 
                             {/* Content */}
-                            <div className="p-8 lg:p-10">
+                            <div className="p-5 sm:p-8 lg:p-10">
                                 <p className="text-foreground/70 font-light leading-relaxed mb-8">
                                     {founder.intro}
                                 </p>
