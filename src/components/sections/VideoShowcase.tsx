@@ -41,8 +41,8 @@ function ClipCard({ clip, index }: { clip: typeof clips[number]; index: number }
                 loop
                 muted
                 playsInline
-                preload="metadata"
-                src={clip.src}
+                preload="auto"
+                src={`${clip.src}#t=0.001`}
                 title={clip.alt}
                 className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 rounded-2xl"
             />

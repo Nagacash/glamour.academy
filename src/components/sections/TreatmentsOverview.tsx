@@ -8,12 +8,11 @@ import { ArrowRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const treatments = [
-    { name: "PDO", description: "Fadenlifting mit resorbierbaren PDO-Fäden für natürliche Straffung.", price: "200€" },
-    { name: "Hyaluron", description: "Volumenauffüllung und Konturierung mit Premium-Hyaluronsäure.", price: "200€" },
-    { name: "Lipolyse", description: "Injektionslipolyse zur gezielten Fettreduktion und Körperkonturierung.", price: "200€" },
-    { name: "Mesotherapie", description: "Mikro-Injektionen mit Wirkstoffen für Hautverjüngung und Revitalisierung.", price: "200€" },
-    { name: "Drip-Spa Infusionskonzepte", description: "Intravenöse Nährstoff-Infusionen für Regeneration und Vitalität.", price: "200€" },
-    { name: "Beratung zur Ausstattung einer Invasivpraxis", description: "Individuelle Beratung zu Praxisausstattung und -konzeption.", price: "200€" },
+    { name: "Infusionskonzept", description: "Intravenöse Nährstoff-Infusionen für Regeneration und Vitalität.", price: "ab 199 € / Stunde", duration: "3 bis 5 Stunden (abhängig von Vorkenntnissen)" },
+    { name: "Lippen 👄", description: "Volumenauffüllung und Konturierung mit Premium-Hyaluronsäure.", price: "ab 199 € / Stunde", duration: "3 bis 5 Stunden (abhängig von Vorkenntnissen)" },
+    { name: "PDO Fäden", description: "Fadenlifting mit resorbierbaren PDO-Fäden für natürliche Straffung.", price: "ab 199 € / Stunde", duration: "3 bis 5 Stunden (abhängig von Vorkenntnissen)" },
+    { name: "Mesotherapie und Fettlypolyse", description: "Mikro-Injektionen mit Wirkstoffen für Hautverjüngung, Revitalisierung und gezielte Fettreduktion.", price: "ab 199 € / Stunde", duration: "3 bis 5 Stunden (abhängig von Vorkenntnissen)" },
+    { name: "Hygieneberatung", description: "Individuelle Beratung zu Hygiene, Praxisausstattung und -konzeption.", price: "ab 199 € / Stunde", duration: "3 bis 5 Stunden (abhängig von Vorkenntnissen)" },
 ];
 
 export function TreatmentsOverview() {
@@ -60,7 +59,7 @@ export function TreatmentsOverview() {
                 {/* Left Side: Sticky Intro */}
                 <div className="md:w-1/3 md:sticky md:top-32 treatment-header">
                     <span className="text-brand-gold uppercase tracking-[0.2em] font-semibold text-xs mb-4 inline-block">
-                        Exklusive Aesthetics
+                        Einzelmodule
                     </span>
                     <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.1] mb-8">
                         Module &amp;<br />
@@ -100,11 +99,14 @@ export function TreatmentsOverview() {
                                         <p className="text-foreground/60 font-light max-w-md">
                                             {treatment.description}
                                         </p>
+                                        <p className="text-xs text-foreground/40 mt-2">
+                                            Dauer: {treatment.duration}
+                                        </p>
                                     </div>
 
                                     <div className="flex items-center space-x-6">
                                         {/* Price - hidden by default, fades in on hover */}
-                                        <div className="opacity-0 translate-x-4 transition-[opacity,transform] duration-500 group-hover:opacity-100 group-hover:translate-x-0">
+                                        <div className="opacity-100 translate-x-0 md:opacity-0 md:translate-x-4 transition-[opacity,transform] duration-500 md:group-hover:opacity-100 md:group-hover:translate-x-0">
                                             <span className="text-xs uppercase tracking-[0.2em] text-foreground/50 block mb-1">Investition</span>
                                             <span className="font-serif italic text-brand-champagne-dark">{treatment.price}</span>
                                         </div>

@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://glamour.academy"),
   title: "Glamour Akademie – The Perfect Skin®",
   description: "Klinische Präzision trifft ästhetische Empathie. 60 Jahre gebündeltes Wissen in Treatments, Masterclasses & Artist Training.",
   openGraph: {
@@ -33,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="scroll-smooth">
+    <html lang="de" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
         <meta name="theme-color" content="#f5f0eb" />
       </head>
